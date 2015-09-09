@@ -10,7 +10,7 @@ import org.apache.cordova.CordovaWebView;
 import org.json.JSONException;
 
 public class UmengAnalytics extends CordovaPlugin {
-    private String mainPageName = "Cordova_Main";
+    private String mainPageName = "index";
 
     @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
@@ -63,7 +63,7 @@ public class UmengAnalytics extends CordovaPlugin {
 
     @Override
     public void onPause(boolean multitasking) {
-        MobclickAgent.onPageStart(mainPageName);
+        MobclickAgent.onPageEnd(mainPageName);
         MobclickAgent.onPause(this.cordova.getActivity());
     }
 
