@@ -1,7 +1,6 @@
-package com.laoxc.cordova.umenganalytics;
+package com.gotojmp.cordova.umenganalytics;
 
 import com.umeng.analytics.MobclickAgent;
-import com.umeng.update.UmengUpdateAgent;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaArgs;
@@ -20,10 +19,6 @@ public class UmengAnalytics extends CordovaPlugin {
         MobclickAgent.setDebugMode(debugMode);
         MobclickAgent.openActivityDurationTrack(false);
         MobclickAgent.updateOnlineConfig(this.cordova.getActivity());
-        boolean umengAutoUpdate = preferences.getBoolean("UmengAutoUpdate", false);
-        if (umengAutoUpdate) {
-            UmengUpdateAgent.update(this.cordova.getActivity());
-        }
     }
 
     @Override
