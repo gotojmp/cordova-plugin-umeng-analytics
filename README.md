@@ -1,11 +1,7 @@
 # cordova-umeng-analytics
-just add the follow code
-```
-<preference name="UMENG_APPKEY" value="you key"/>
-<platform name="android">
-        <preference name="UMENG_CHANNEL" value="wangdoujia"/>
-    </platform>
-    <platform name="ios">
-        <preference name="UMENG_CHANNEL" value="IOS"/>
-</platform>
-```
+
+# Installation
+
+ionic plugin add https://github.com/gotojmp/cordova-umeng-analytics.git --variable UMENG_APPKEY=XXXXXXXXXXXXXXXX --variable UMENG_CHANNEL=XXXXXXXXX
+or
+cordova plugin add https://github.com/gotojmp/cordova-umeng-analytics.git --variable UMENG_APPKEY=XXXXXXXXXXXXXXXX --variable UMENG_CHANNEL=XXXXXXXXX
