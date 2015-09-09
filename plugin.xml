@@ -29,6 +29,8 @@
     <repo>https://github.com/gotojmp/cordova-umeng-analytics.git</repo>
     <issue>https://github.com/gotojmp/cordova-umeng-analytics/issues</issue>
 
+    <preference name="UMENG_APPKEY"/>
+    <preference name="UMENG_CHANNEL"/>
     <engines>
       <engine name="cordova" version=">=3.1.0"/>
     </engines>
@@ -37,8 +39,6 @@
     </js-module>
     <!-- android -->
     <platform name="android">
-        <preference name="UMENG_APPKEY"/>
-        <preference name="UMENG_CHANNEL"/>
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="UmengAnalytics">
                 <param name="android-package" value="com.gotojmp.cordova.umenganalytics.UmengAnalytics"/>
@@ -59,8 +59,6 @@
         <source-file src="src/android/lib/umeng-analytics-v5.5.3.jar" target-dir="libs"/>
     </platform>
     <platform name="ios">
-        <preference name="UMENG_APPKEY"/>
-        <preference name="UMENG_CHANNEL"/>
         <config-file target="config.xml" parent="/*">
             <feature name="UmengAnalytics">
                 <param name="ios-package" value="CDVUmengAnalytics"/>
