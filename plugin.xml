@@ -19,15 +19,15 @@
 -->
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="cordova-umeng-analytics"
+        id="cordova-plugin-umeng-analytics"
         version="0.0.1">
 
-    <name>CordovaUmengAnalytics</name>
+    <name>CordovaPluginUmengAnalytics</name>
     <description>cordova umeng analytics Plugin</description>
     <license>Apache 2.0</license>
     <keywords>cordova,umeng,analytics</keywords>
-    <repo>https://github.com/gotojmp/cordova-umeng-analytics.git</repo>
-    <issue>https://github.com/gotojmp/cordova-umeng-analytics/issues</issue>
+    <repo>https://github.com/gotojmp/cordova-plugin-umeng-analytics.git</repo>
+    <issue>https://github.com/gotojmp/cordova-plugin-umeng-analytics/issues</issue>
 
     <preference name="UMENG_APPKEY"/>
     <preference name="UMENG_CHANNEL"/>
