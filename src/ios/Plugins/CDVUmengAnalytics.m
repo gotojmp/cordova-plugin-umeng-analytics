@@ -56,9 +56,9 @@
     }
     NSString* appkey;
     NSString* channelId;
-    setting=@"UMENG_APPKEY";
+    setting=@"UMENG_APPKEY_IOS";
     appkey=[self settingForKey:setting];
-    setting=@"UMENG_CHANNEL";
+    setting=@"UMENG_CHANNEL_IOS";
     channelId=[self settingForKey:setting];
     [MobClick setAppVersion:XcodeAppVersion];
     [MobClick startWithAppkey:appkey reportPolicy:BATCH   channelId:channelId];

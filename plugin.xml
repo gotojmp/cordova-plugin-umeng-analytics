@@ -29,8 +29,10 @@
     <repo>https://github.com/gotojmp/cordova-plugin-umeng-analytics.git</repo>
     <issue>https://github.com/gotojmp/cordova-plugin-umeng-analytics/issues</issue>
 
-    <preference name="UMENG_APPKEY"/>
-    <preference name="UMENG_CHANNEL"/>
+    <preference name="UMENG_APPKEY_IOS"/>
+    <preference name="UMENG_CHANNEL_IOS"/>
+    <preference name="UMENG_APPKEY_ANDROID"/>
+    <preference name="UMENG_CHANNEL_ANDROID"/>
     <engines>
       <engine name="cordova" version=">=3.1.0"/>
     </engines>
@@ -52,18 +54,21 @@
             <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <meta-data android:name="UMENG_APPKEY" android:value="$UMENG_APPKEY"/>
-            <meta-data android:name="UMENG_CHANNEL" android:value="$UMENG_CHANNEL"/>
+            <meta-data android:name="UMENG_APPKEY" android:value="$UMENG_APPKEY_ANDROID"/>
+            <meta-data android:name="UMENG_CHANNEL" android:value="$UMENG_CHANNEL_ANDROID"/>
         </config-file>
         <source-file src="src/android/UmengAnalytics.java" target-dir="src/com/gotojmp/cordova/umenganalytics"/>
         <source-file src="src/android/lib/umeng-analytics-v5.5.3.jar" target-dir="libs"/>
     </platform>
+
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
             <feature name="UmengAnalytics">
                 <param name="ios-package" value="CDVUmengAnalytics"/>
                 <param name="onload" value="true"/>
             </feature>
+            <preference name="UMENG_APPKEY_IOS" value="$UMENG_APPKEY_IOS" />
+            <preference name="UMENG_CHANNEL_IOS" value="$UMENG_CHANNEL_IOS" />
         </config-file>
         <header-file src="src/ios/Plugins/CDVUmengAnalytics.h"/>
         <source-file src="src/ios/Plugins/CDVUmengAnalytics.m"/>
